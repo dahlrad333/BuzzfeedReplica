@@ -1,0 +1,22 @@
+﻿@model Buzzfeedsession4.Models.Quiz
+
+@{
+    ViewBag.Title = "Quiz";
+}
+
+<h2>@Model.title</h2>
+
+<ul>
+    @foreach (var question in Model.questions)
+    {
+        <li>
+            <a href=" /Make/newAnswer/@question.id">@question.question</a>
+        </li>
+    }
+
+</ul>
+
+<a href="/Make/NewQuestion/@Model.id"> Add new Q </a>
+
+
+

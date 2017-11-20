@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Buzzfeedsession4.Models.Quiz>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of quizzes that have been made</h2>
+
+<ul>
+    @foreach (var quiz in Model)
+    {
+        <li><a href="/Make/quiz/@quiz.id">@quiz.title</a></li>
+    }
+
+</ul>
+
+@Html.ActionLink("Add new quiz", "Create", "Make")
